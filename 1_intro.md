@@ -1,0 +1,33 @@
+- From qubit to p-bit
+    - classical: either '0' or '1';
+    - probablistic: have prob $p$ for '0' and $(1-p)$ for '1';
+    - quantum: simultaneously be in '0' and '1':
+        - exponential speedup;
+        - once measure, it will collapse into one of its state;
+- Dirac notation:
+    - Let $a,b\in{}\mathbb{C}^2$
+        - Ket: $|a\rangle=\begin{bmatrix}a_0\\a_1\end{bmatrix}$
+        - Bra: $\langle{}b|=\begin{bmatrix}b_0&b_1\end{bmatrix}$
+        - Bra-ket: $\langle{}b|a\rangle=a_0b_0+a_1b_1\in{}\mathbb{C}$
+        - Ket-bra: $|a\rangle\langle{}b|=\begin{bmatrix}a_0b_0&a_0b_1\\a_1b_0&a_1b_1\end{bmatrix}$
+    - Define the pure state
+        - $|0\rangle=\begin{bmatrix}0\\1\end{bmatrix}$ and 
+        $|1\rangle=\begin{bmatrix}1\\0\end{bmatrix}$
+        - $|0\rangle\langle{}0|=\begin{bmatrix}1&0\\0&0\end{bmatrix}$ and $|1\rangle\langle{}1|=\begin{bmatrix}0&0\\0&1\end{bmatrix}$
+        - $\rho = \rho_{00}|0\rangle\langle{}0| + \rho_{01}|0\rangle\langle{}1| + \rho_{10}|1\rangle\langle{}0| + \rho_{11}|1\rangle\langle{}1|$
+    - all q-state can be described by density matrix
+    - spetral decomposition: for every density matrix $\rho$, $\exist\{|i\rangle{}\}$ (orthongonal matrix), s.t. $\rho=\sum\lambda_i|i\rangle\langle{}i|$, where $|i\rangle$ is the eigenstate, $\lambda_i$ is the eigenvalue and $\sum\lambda_i=1$
+    - a density matrix is pure if $\rho=|\Phi\rangle\langle\Phi|$, otherwise is mixed;
+- Measurement:
+    - choose orthogonal bases to describe and measure quantum state;
+    - during a measurement onto the basis $\{|0\rangle,|1\rangle\}$, the state will collapse into either ${|0\rangle}$ or ${|1\rangle}$;
+    - z-measurement: $\sigma_z=\begin{bmatrix}1&0\\0&1\end{bmatrix}$;
+- **Born rule**:
+    - the probability that a state $|\Phi\rangle$ collapses during a projection measurement onto the basis $\{|x\rangle,|x^\bot\rangle\}$ to the state $|x\rangle$ is given by $p(x)=|\langle{x}|\Phi\rangle|^2,{ }\sum{}p(x_i)=1$;
+- Bloch sphere:
+    - Can write any normalized pure state as: $$|\Phi\rangle=\cos(\frac{\theta}{2})|0\rangle+e^{i\phi}\sin(\frac{\theta}{2})|1\rangle$$
+        - $\phi\in[0,2\pi)$ describes the relative phase;
+        - $\theta\in[0, \pi]$ determines the probability to measurements;
+    - coordiante: $\vec{r}=\begin{bmatrix}\sin\theta\cos\phi{}\\{}\sin\theta\sin\phi{}\\{}\cos\theta\end{bmatrix}$
+    - z-measurement corresponds to a projection onto the z-axis and analogously for x and y
+
